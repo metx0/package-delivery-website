@@ -121,19 +121,66 @@ let form2 = /*html*/
 
 let options = /*html*/
 `
-<label for="destinationZip" class="form-label"
-    >Destination Zip Code</label
->
-<input
-    type="number"
-    id="destinationZip"
-    name="destinationZip"
-    class="form-control"
-    placeholder="Enter destination zip code"
-    min="1"
-    maxlength="10"
-    required
-/>
+<div>
+    <p class="text-center fw-bold">
+        Select an option for your delivery
+    </p>
+    <div class="container-options">
+        <div class="option">
+            <img
+                class="w-100"
+                src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Logo_de_Estafeta.svg"
+                alt=""
+            />
+            <button class="btn btn-primary btn-option btn-next estafeta">
+                Select
+            </button>
+        </div>
+        <div class="option">
+            <img
+                class="w-100"
+                src="https://www.redpack.com.mx/wp-content/uploads/2021/06/logored-uai-2064x306.png"
+                alt=""
+            />
+            <button class="btn btn-primary btn-option btn-next redpack">
+                Select
+            </button>
+        </div>
+        <div class="option">
+            <img
+                class="w-100"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/DHL_Logo.svg/1280px-DHL_Logo.svg.png"
+                alt=""
+            />
+            <button class="btn btn-primary btn-option btn-next dhl">
+                Select
+            </button>
+        </div>
+        <div class="option">
+            <img
+                class="w-100"
+                src="https://nwafoundation.org/wp-content/uploads/2017/04/FedEx-Logo-PNG-Transparent.png"
+                alt=""
+            />
+            <button class="btn btn-primary btn-option btn-next fedex">
+                Select
+            </button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+        <button
+            type="button"
+            class="btn btn-primary btn-previous"
+        >
+            Previous
+        </button>
+    </div>
+</div>
 `
 
-export { form1, form2, options }
+let form4 =
+`
+El final
+`
+
+export { form1, form2, options, form4 }

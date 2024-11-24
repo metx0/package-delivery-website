@@ -25,10 +25,6 @@ body {
     margin-top: 3rem;
 }
 
-/* .form div {
-    margin-bottom: 2rem;
-} */
-
 .container-dimensions {
     display: flex;
     justify-content: center;
@@ -38,6 +34,33 @@ body {
 
 .container-dimension-input {
     flex: 1;
+}
+
+/* Options grid */
+.container-options {
+    margin-top: 3rem;
+    display: grid; 
+    /* 2 columns of equal size */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+}
+
+div.option {
+    background-color: antiquewhite;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.btn-option {
+    margin-top: 1rem;
+}
+
+div.option p {
+    font-weight: bold;
 }
 
 @media (max-width: 500px) {
@@ -52,6 +75,11 @@ body {
     .container-dimensions {
         flex-direction: column;
         align-items: center;
+    }
+
+    .container-options {
+        display: flex;
+        flex-direction: column;
     }
 }
 
