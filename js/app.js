@@ -124,6 +124,7 @@ function handleNext(event) {
             // Show a resume of the delivery
             showGenericModal('Resume of your delivery', modalBody)
             form.innerHTML = form1
+            addBtnListeners()
             currentForm = 1
             break
     }
