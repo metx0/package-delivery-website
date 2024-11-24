@@ -7,7 +7,6 @@ let sender, recipient, street, colony, city, phoneNumber, email
 
 const form = document.querySelector('.form')
 const errorModal = new bootstrap.Modal(document.getElementById('errorModal'))
-const successModal = new bootstrap.Modal(document.getElementById('sucessModal'))
 
 /*
 Get all the buttons with class btn, and add the event listener 
