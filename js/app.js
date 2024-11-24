@@ -26,6 +26,13 @@ function addBtnListeners() {
     })
 }
 
+function showGenericModal(title, body) {
+    document.getElementById('generic-modal-title').innerText = title
+    document.getElementById('generic-modal-body').innerHTML = body
+    const modal = new bootstrap.Modal(document.getElementById('genericModal'))
+    modal.show()
+}
+
 /* 
 We check in which form we are, validate the data specific to that form,
 and change to the next form 
@@ -99,7 +106,24 @@ function handleNext(event) {
                 return
             }
 
-            successModal.show()
+            // Sorry, I couldn't do that in the form with type="email"
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            if (!emailRegex.test(email)) {
+                showGenericModal('Error', 'The email is invalid')
+                return
+            }
+
+            let modalBody =
+                `
+            <p>Destination zip: ${destinationZip}</p>
+            <p>Weight: ${weight}</p>
+            <p>Dimensions: ${height} x ${width} x ${length}</p>
+            <p>Direction: ${street}, ${colony}, ${city}</p>
+            <p>Company: ${selectedCompany}</p>
+            `
+
+            // Show a resume of the delivery
+            showGenericModal('Resume of your delivery', modalBody)
             form.innerHTML = form1
             currentForm = 1
             break
