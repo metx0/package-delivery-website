@@ -1,7 +1,7 @@
 // The HTML code of the forms as JS variables
 
 let form1 = /*html*/
-`
+    `
 <form>  
     <div class="mb-3">
         <label for="originZip" class="form-label"
@@ -38,7 +38,7 @@ let form1 = /*html*/
 `
 
 let form2 = /*html*/
-`
+    `
 <form>
 <p class="fw-bold text-center">
     Enter weight and dimension of the packet (kg, cm)
@@ -120,7 +120,7 @@ let form2 = /*html*/
 `
 
 let options = /*html*/
-`
+    `
 <div>
     <p class="text-center fw-bold">
         Select an option for your delivery
@@ -178,9 +178,119 @@ let options = /*html*/
 </div>
 `
 
-let form4 =
-`
-El final
+let form4 = /*html*/
+        `
+    <form>
+    <p class="fw-bold text-center">
+        Now, we need you to enter personal data
+    </p>
+    <div class="mb-3">
+        <label for="sender" class="form-label">Sender</label>
+        <input
+            type="text"
+            id="sender"
+            name="sender"
+            class="form-control"
+            placeholder="Your name"
+            required
+        />
+    </div>
+    <div class="mb-3">
+        <label for="recipient" class="form-label"
+            >Recipient</label
+        >
+        <input
+            type="text"
+            id="recipient"
+            name="recipient"
+            class="form-control"
+            placeholder="Who receives"
+            required
+        />
+    </div>
+    <div
+        class="mb-3 container-direction d-flex justify-content-center gap-3"
+    >
+        <div class="container-direction-data">
+            <label for="street" class="form-label"
+                >Street</label
+            >
+            <input
+                type="text"
+                id="street"
+                name="street"
+                class="form-control"
+                placeholder="Street"
+                required
+            />
+        </div>
+        <div class="container-direction-data">
+            <label for="colony" class="form-label"
+                >Colony</label
+            >
+            <input
+                type="text"
+                id="colony"
+                name="colony"
+                class="form-control"
+                placeholder="Colony"
+                required
+            />
+        </div>
+        <div class="container-direction-data">
+            <label for="city" class="form-label">City</label>
+            <input
+                type="text"
+                id="city"
+                name="city"
+                class="form-control"
+                placeholder="City"
+                required
+            />
+        </div>
+    </div>
+    <div
+        class="mb-3 container-tel d-flex justify-content-around"
+    >
+        <div class="container-tel-data">
+            <label for="phone-number" class="form-label"
+                >Phone number</label
+            >
+            <input
+                type="number"
+                id="phone-number"
+                name="phone-number"
+                class="form-control"
+                placeholder="Phone number"
+                required
+            />
+        </div>
+        <div class="container-tel-data">
+            <label for="email" class="form-label"
+                >Email</label
+            >
+            <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                required
+            />
+        </div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <button
+            type="button"
+            class="btn btn-primary btn-previous"
+        >
+            Previous
+        </button>
+        <button type="button" class="btn btn-primary btn-next">
+            Next
+        </button>
+    </div>
+</form>
 `
 
 export { form1, form2, options, form4 }
